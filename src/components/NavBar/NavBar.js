@@ -1,18 +1,13 @@
 import React, { useState } from 'react';
 import { Bars3Icon, XMarkIcon} from '@heroicons/react/24/solid'
-import NavItem from '../NavItem/NavItem';
+import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+
+
 
 const NavBar = () => {
 
      const [Open , setOpen] = useState(false)
-
-     const routes = [
-          {id:1, name:'Home' , path:'/Home'},
-          {id:2, name:'Product' , path:'/Product'},
-          {id:3, name:'Orders' , path:'/Orders'},
-          {id:4, name:'About' , path:'/About'},
-          {id:5, name:'Contact' , path:'/Contact'}
-     ]
 
      return (
           <nav className=' bg-blue-400 w-full py-1  '>
@@ -21,11 +16,15 @@ const NavBar = () => {
                          Open ? <XMarkIcon /> : <Bars3Icon />
                     }
                </div>
-               <div className=' grid grid-cols-3 items-center justify-center '>
-                    <ul className={` col-span-2 justify-center md:flex absolute md:static bg-blue-400 duration-500  w-full ${ Open ? 'top-8' : 'top-[-250px]'}`}>
-                         {    
-                              routes.map(route => <NavItem key={route.id} route={route}> </NavItem>)
-                         }
+               <div className=' grid grid-cols-3 items-center  '>
+                    <ul className={` py-2 col-span-2 justify-center md:flex absolute md:static bg-blue-400 duration-500  w-full ${ Open ? 'top-8' : 'top-[-250px]'}`}>
+               
+                    <li className='m-4'><a  href='/Topic'> Topic </a></li>
+                    <li className='m-4'><a  href='/Blog'>Blog</a></li>
+                    <li className='m-4'><a  href='/Statistics'>Statistics</a></li>
+                    <li className='m-4'><a  href='/Contact'>Contact</a></li>
+                    <li className='m-4'><a  href='/About'>About</a></li>   
+                       
                     </ul>
                     <div className=' text-white text-center hidden md:block text-2xl font-semibold'> 
                          Guess Quiz

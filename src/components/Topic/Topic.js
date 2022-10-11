@@ -9,7 +9,7 @@ const Topic = () => {
      return (
           <div>
                <Header> </Header>
-               <div className='grid grid-cols-2 my-10 mx-4 gap-24 '>
+               <div className='grid md:grid-cols-2 my-10 mx-4 gap-10 '>
                {
                     quizData.map(EachData => <EachTopic key={EachData.id} EachData={EachData} > </EachTopic>) 
                }

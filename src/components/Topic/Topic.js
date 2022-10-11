@@ -4,15 +4,16 @@ import EachTopic from '../EachTopic/EachTopic';
 import Header from '../Header/Header';
 
 const Topic = () => {
-     const quizData = useLoaderData();
-     const topics = quizData.data
-     // console.log(topics.id)
+     const  topics= useLoaderData();
+     const quizData = topics.data
      return (
           <div>
                <Header> </Header>
+               <div className='grid grid-cols-2 my-10 mx-4 gap-24 '>
                {
-                    quizData.map(Each => <EachTopic quizData={quizData} > </EachTopic>)
+                    quizData.map(EachData => <EachTopic key={EachData.id} EachData={EachData} > </EachTopic>) 
                }
+          </div>
           </div>
      );
 };

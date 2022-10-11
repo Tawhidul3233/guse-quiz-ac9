@@ -3,7 +3,7 @@ import React from 'react'
 
 const Header = () => {
      return (
-          <div className='md:flex m-5 border border-x-fuchsia-400'>
+          <div className='md:flex m-5 border border-x-indigo-500'>
                <div className=' md:w-1/3 ' >
                     <img className=' m-auto h-80 w-full' src="./img/images.png" alt="" />
                </div>

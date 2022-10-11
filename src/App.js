@@ -5,6 +5,7 @@ import Layout from './Layout/Layout';
 import Topic from './components/Topic/Topic';
 import Blog from './components/Blog/Blog';
 import Statistics from './components/Statistics/Statistics';
+import Error from './components/Error/Error';
 
 
 
@@ -13,12 +14,16 @@ function App() {
     { path:'/' , 
     element: <Layout> </Layout>,
     children: [
-      {path:'/', element: <Topic> </Topic>},
+      {path:'/', 
+      loader: () => {
+        return fetch('https://openapi.programming-hero.com/api/quiz')
+      },
+      element: <Topic> </Topic>},
       {path:'Blog' , element: <Blog> </Blog>},
       {path:'Statistics', element: <Statistics> </Statistics>}
     ]
   },
-    { path:'*', element: <div> error </div>}
+    { path:'*', element: <Error> </Error> }
   ])
 
 

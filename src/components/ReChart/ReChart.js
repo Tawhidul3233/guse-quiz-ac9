@@ -15,7 +15,7 @@ const ReChart = ({eachData}) => {
                     <CartesianGrid stroke="#ccc" />
                     <Tooltip />
                </LineChart>
-          </div>
+               </div>
           </div>
      );
 };

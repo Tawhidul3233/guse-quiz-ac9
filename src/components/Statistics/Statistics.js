@@ -5,7 +5,6 @@ import ReChart from '../ReChart/ReChart';
 const Statistics = () => {
      const allData = useLoaderData();
      const Data = allData.data
-     console.log()
      return (
           <div>
                {

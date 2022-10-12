@@ -10,6 +10,7 @@ import Quiz from './components/Quiz/Quiz';
 
 
 
+
 function App() {
   const router = createBrowserRouter([
     { path:'/' , 
@@ -31,7 +32,8 @@ function App() {
           return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
         },
         element: <Quiz> </Quiz>
-    }
+    },
+    
     ]
   },
     { path:'*', element: <Error> </Error> }

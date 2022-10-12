@@ -3,9 +3,9 @@ import { useLoaderData } from 'react-router-dom';
 import Question from '../Question/Question';
 
 const Quiz = () => {
-     const datat = useLoaderData();
-     const datas = datat.data
-     const {name, questions, id} = datas
+     const allData = useLoaderData();
+     const data = allData.data
+     const {name, questions} = data
      console.log(questions )
      return (
           <div>
@@ -13,7 +13,7 @@ const Quiz = () => {
                    <h1 className='text-4xl m-5'>{name}</h1>
                    <p className='text-2xl'>Number of Questions : {questions.length}</p>
                    {
-                    questions.map(allQuestion => <Question key={id} allQuestion={allQuestion}> </Question>)
+                    questions.map(allQuestion => <Question key={allQuestion.id} allQuestion={allQuestion}> </Question>)
                    }
                </div>
           </div>

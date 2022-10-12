@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ForwardIcon } from '@heroicons/react/24/solid'
 
 
 const EachTopic = ({EachData}) => {
@@ -13,7 +14,7 @@ const EachTopic = ({EachData}) => {
                <div className='m-auto text-left '>
                     <h1 className=' text-4xl'> {name}</h1>
                     <p className=' my-4 text-2xl'>Question :  </p>
-                    <Link to={`/quiz/${id}`}> <button className=' uppercase  bg-indigo-500 text-white py-2 px-8 rounded-md'> Start Quiz </button> </Link>
+                    <Link to={`/quiz/${id}`}> <button className=' flex items-center uppercase  bg-indigo-500 text-white py-2 px-8 rounded-md'> Start Quiz<ForwardIcon className='h-4 pl-2'></ForwardIcon> </button> </Link>
                </div>
           </div>
      );

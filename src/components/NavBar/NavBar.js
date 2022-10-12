@@ -22,7 +22,6 @@ const NavBar = () => {
                     <li className='m-5'><NavLink  to="/"> Home </NavLink></li>
                     <li className='m-5'><NavLink className={({isActive})=> isActive ? ' text-white ' : undefined} to="Blog"> Blog</NavLink></li>
                     <li className='m-5'><NavLink className={({isActive})=> isActive ? ' text-white' : undefined} to="Statistics"> Statistics</NavLink></li>
-                    <li className='m-5'><NavLink className={({isActive})=> isActive ? ' text-white ' : undefined} to="Contact"> Contact</NavLink></li>
                     <li className='m-5'><NavLink className={({isActive})=> isActive ? ' text-white ' : undefined} to="About"> About</NavLink></li>
 
                     </ul>

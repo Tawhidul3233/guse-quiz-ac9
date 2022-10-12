@@ -19,15 +19,15 @@ const NavBar = () => {
                <div className=' grid grid-cols-3 items-center  '>
                     <ul className={` py-2 col-span-2 justify-center md:flex absolute md:static bg-blue-400 duration-500  w-full ${ Open ? 'top-8' : 'top-[-250px]'}`}>
 
-                    <li className='m-5'><NavLink className={({isActive})=> isActive ? ' text-white px-3 py-1' : 'text-black'} to="/"> Topic</NavLink></li>
-                    <li className='m-5'><NavLink className={({isActive})=> isActive ? ' text-white px-3 py-1' : undefined} to="Blog"> Blog</NavLink></li>
-                    <li className='m-5'><NavLink className={({isActive})=> isActive ? ' text-white px-3 py-1' : undefined} to="Statistics"> Statistics</NavLink></li>
-                    <li className='m-5'><NavLink className={({isActive})=> isActive ? ' text-white px-3 py-1' : undefined} to="Contact"> Contact</NavLink></li>
-                    <li className='m-5'><NavLink className={({isActive})=> isActive ? ' text-white px-3 py-1' : undefined} to="About"> About</NavLink></li>
+                    <li className='m-5'><NavLink  to="/"> Home </NavLink></li>
+                    <li className='m-5'><NavLink className={({isActive})=> isActive ? ' text-white ' : undefined} to="Blog"> Blog</NavLink></li>
+                    <li className='m-5'><NavLink className={({isActive})=> isActive ? ' text-white' : undefined} to="Statistics"> Statistics</NavLink></li>
+                    <li className='m-5'><NavLink className={({isActive})=> isActive ? ' text-white ' : undefined} to="Contact"> Contact</NavLink></li>
+                    <li className='m-5'><NavLink className={({isActive})=> isActive ? ' text-white ' : undefined} to="About"> About</NavLink></li>
 
                     </ul>
-                    <div className=' text-white text-center hidden md:block text-2xl font-semibold'> 
-                         Guess Quiz
+                    <div className=' text-white hidden md:block text-2xl font-semibold'> 
+                         <h1 >Guess Quiz</h1>
                     </div>
                </div>
           </nav>

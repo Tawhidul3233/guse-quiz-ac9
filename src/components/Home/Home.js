@@ -3,7 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import EachTopic from '../EachTopic/EachTopic';
 import Header from '../Header/Header';
 
-const Topic = () => {
+const Home = () => {
      const  topics= useLoaderData();
      const quizData = topics.data
      return (
@@ -18,4 +18,4 @@ const Topic = () => {
      );
 };
 
-export default Topic;
+export default Home;

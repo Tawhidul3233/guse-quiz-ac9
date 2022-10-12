@@ -1,9 +1,16 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import ReChart from '../ReChart/ReChart';
 
 const Statistics = () => {
+     const allData = useLoaderData();
+     const Data = allData.data
+     console.log()
      return (
           <div>
-               <h1> this is statistcs</h1>
+               {
+                    Data.map(eachData => <ReChart key={eachData.id} eachData={eachData}> </ReChart>)
+               }
           </div>
      );
 };

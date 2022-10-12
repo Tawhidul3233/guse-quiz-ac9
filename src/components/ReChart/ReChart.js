@@ -3,7 +3,7 @@ import { LineChart, Line, CartesianGrid, XAxis, YAxis,Tooltip } from 'recharts';
 
 const ReChart = ({eachData}) => {
      const {total} = eachData
-     // console.log(total)
+     
      return (
           <div>
                <h1 className='  my-5 text-6xl font-semibold'> Line Chart </h1>
